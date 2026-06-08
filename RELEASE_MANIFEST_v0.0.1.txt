@@ -1,0 +1,17 @@
+PAC-Zero/ZPL MLX Mechanism Validation Artifact v0.0.1
+
+Included:
+- README.md with narrowed claim boundary.
+- run.sh for quick archive validation and optional local MLX smoke reruns.
+- PACZERO_MLX_ZENODO_RELEASE.md and .zenodo.json metadata.
+- PACZero/ZPL Python validation scripts.
+- Main GitHub Actions validation workflow.
+- Preserved JSON/report/log evidence for the v0.0.1 smoke-scale mechanism validation.
+
+Excluded:
+- Experimental utility-sweep scripts/workflows.
+- Adapter .npz files, to keep the archive compact.
+- Old archive-unpack workflow.
+
+Claim boundary:
+Mechanism validation only. This archive does not claim paper-scale utility reproduction.

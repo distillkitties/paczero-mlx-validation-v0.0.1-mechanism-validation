@@ -1,6 +1,6 @@
 # PACZero SmolLM validation aggregate report
 
-Overall success: **True**
+Overall success: **False**
 
 ## Scope and claim boundary
 
@@ -28,8 +28,8 @@ Fast validation SmolLM MLX adaptation of PACZero-ZPL mechanism, with smoke-scale
 | `all_membership_M_over_2` | True |
 | `all_rank8_alpha16` | True |
 | `all_qv_projection_set` | True |
-| `all_layers_requested` | True |
-| `all_have_60_qv_targets_for_smollm` | True |
+| `all_layers_requested` | False |
+| `all_have_60_qv_targets_for_smollm` | False |
 | `all_fd_finite` | True |
 | `all_fd_signal` | True |
 | `all_privacy_audits_passed` | True |
@@ -42,7 +42,7 @@ Fast validation SmolLM MLX adaptation of PACZero-ZPL mechanism, with smoke-scale
 | `negative_control_good_zpl_passes` | True |
 | `negative_control_bad_secret_release_fails` | True |
 | `utility_controls_present` | True |
-| `utility_controls_successful` | True |
+| `utility_controls_successful` | False |
 | `utility_controls_not_worse_than_baseline` | True |
 | `utility_controls_fd_signal` | True |
 
@@ -50,14 +50,14 @@ Fast validation SmolLM MLX adaptation of PACZero-ZPL mechanism, with smoke-scale
 
 | Task | Success | Runtime s | M | Membership | Targets | Steps | FD finite | FD signal | I=0 audit | Utility >= baseline | Violations |
 |---|---:|---:|---:|---|---:|---:|---:|---:|---:|---:|---:|
-| sst2 | True | 48.552 | 126 | [63] | 60 | 30 | 1.0 | 1.0 | True | True | 0 |
+| sst2 | True | 9013.597 | 126 | [63] | 16 | 500 | 1.0 | 1.0 | True | True | 0 |
 | squad | True | 64.756 | 126 | [63] | 60 | 30 | 1.0 | 1.0 | True | True | 0 |
 
 ## Non-private ZO utility controls
 
 | Task | Success | Runtime s | Targets | Steps | FD finite | FD signal | Utility >= baseline | Adapter saved |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| sst2 | True | 43.298 | 60 | 30 | 1.0 | 1.0 | True | True |
+| sst2 | False | 9224.541 | 16 | 500 | 1.0 | 1.0 | True | True |
 | squad | True | 61.468 | 60 | 30 | 1.0 | 1.0 | True | True |
 
 ## Negative-control audit
